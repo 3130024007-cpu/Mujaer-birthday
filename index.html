@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,6 +7,10 @@
 
 <title>Happy Birthday Sayang 🤎</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,107 +18,153 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
-
 
 body{
 
     min-height:100vh;
-    overflow:hidden;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    padding:20px;
+
     background:linear-gradient(
         135deg,
         #ffffff,
-        #fff8f2,
-        #e8d0b8
+        #fff7f2,
+        #ecd7c4
     );
 
 }
-
 
 /* dekorasi jatuh */
 
 .falling{
 
     position:fixed;
-    top:-60px;
-    z-index:1;
+    top:-80px;
 
-    animation:fall linear infinite;
+    z-index:1;
 
     pointer-events:none;
 
-}
+    animation:fall linear infinite;
 
+}
 
 @keyframes fall{
 
     from{
+
         transform:translateY(-100px) rotate(0deg);
+
     }
 
     to{
+
         transform:translateY(110vh) rotate(360deg);
+
     }
 
 }
 
-
+/* container */
 
 .container{
 
-    width:90%;
-    max-width:500px;
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+    max-width:520px;
 
     text-align:center;
 
-    position:relative;
-    z-index:5;
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:28px;
+
+    padding:30px 25px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    animation:fade .5s;
 
 }
 
+@keyframes fade{
 
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
 
 h1{
 
-    color:#805438;
+    color:#7d5438;
 
-    font-size:42px;
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.small{
+
+    color:#a37b63;
+
+    font-style:italic;
+
+    margin-bottom:8px;
+
+}
+
+.gif-box{
 
     margin-bottom:20px;
 
 }
 
-
-
 .gif-box img{
 
-    width:230px;
+    width:220px;
+    max-width:100%;
 
-    border-radius:20px;
+    border-radius:18px;
 
 }
-
-
 
 .text{
 
-    margin-top:20px;
+    margin-top:15px;
 
-    color:#8d6045;
+    color:#8a6045;
 
-    font-size:21px;
+    font-size:20px;
 
-    line-height:1.6;
+    line-height:1.7;
 
 }
-
-
 
 button{
 
@@ -125,51 +174,29 @@ button{
 
     border:none;
 
-    border-radius:30px;
+    border-radius:40px;
 
     background:#f4a5b8;
 
     color:white;
 
-    font-size:20px;
-
     cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
 
     transition:.3s;
 
 }
 
-
 button:hover{
 
-    transform:scale(1.1);
+    transform:scale(1.08);
 
 }
-
-
 
 /* moment */
-
-.moment h1{
-
-    font-family:cursive;
-
-    font-size:45px;
-
-}
-
-
-.small{
-
-    color:#a4775b;
-
-    font-style:italic;
-
-}
-
-
-
-/* foto */
 
 .photo-slider{
 
@@ -177,268 +204,320 @@ button:hover{
 
     gap:15px;
 
-    overflow-x:auto;
+    margin-top:20px;
 
-    padding:15px;
+    overflow-x:auto;
 
     scroll-snap-type:x mandatory;
 
+    padding-bottom:10px;
+
 }
 
+.photo-slider::-webkit-scrollbar{
+
+    height:6px;
+
+}
+
+.photo-slider::-webkit-scrollbar-thumb{
+
+    background:#d6b39d;
+
+    border-radius:20px;
+
+}
 
 .photo-slider img{
 
-    width:260px;
+    flex:0 0 auto;
 
-    height:350px;
+    width:250px;
+
+    height:330px;
 
     object-fit:cover;
 
-    border-radius:20px;
+    border-radius:18px;
 
     scroll-snap-align:center;
 
 }
 
-
-
 .big-text{
 
     margin-top:20px;
 
-    font-size:22px;
+    font-size:21px;
 
-    font-weight:bold;
+    font-weight:600;
 
-    color:#805438;
+    color:#7d5438;
 
 }
-
-
 
 .normal-text{
 
     margin-top:15px;
 
-    color:#95664b;
+    color:#91684d;
 
-    font-size:18px;
+    font-size:17px;
 
 }
-
-
 
 /* surat */
 
 .letter-box{
 
-    width:90%;
+    margin-top:20px;
 
-    max-width:450px;
+    width:100%;
 
-    height:400px;
+    max-height:420px;
 
     overflow-y:auto;
 
-    margin:auto;
-
-    padding:25px;
-
-    background:rgba(255,255,255,.6);
-
-    border-left:3px solid #f0a5b7;
-
-    border-right:3px solid #f0a5b7;
-
-    border-radius:20px;
+    padding:20px;
 
     text-align:left;
 
+    background:rgba(255,255,255,.55);
+
+    border-left:4px solid #f3adc0;
+
+    border-right:4px solid #f3adc0;
+
+    border-radius:18px;
+
     color:#795548;
 
-    line-height:1.8;
+    line-height:1.9;
 
 }
 
+/* HP */
+
+@media(max-width:600px){
+
+    .container{
+
+        padding:22px 18px;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    .gif-box img{
+
+        width:170px;
+
+    }
+
+    .text{
+
+        font-size:17px;
+
+    }
+
+    button{
+
+        width:100%;
+
+        font-size:17px;
+
+    }
+
+    .photo-slider img{
+
+        width:190px;
+
+        height:260px;
+
+    }
+
+    .big-text{
+
+        font-size:18px;
+
+    }
+
+    .normal-text{
+
+        font-size:16px;
+
+    }
+
+    .letter-box{
+
+        max-height:50vh;
+
+        font-size:15px;
+
+    }
+
+}
+
+/* Tablet */
+
+@media(min-width:601px) and (max-width:1024px){
+
+    .container{
+
+        max-width:600px;
+
+    }
+
+    h1{
+
+        font-size:40px;
+
+    }
+
+}
 
 </style>
 
 </head>
 
-
-
 <body>
-
-
 
 <script>
 
-
-// animasi jatuhan
-
-let decoration=[
-
-"🧸",
-"🎀",
-"💗"
-
-];
-
+let decoration=["🧸","🎀","💗"];
 
 for(let i=0;i<40;i++){
 
-
     let item=document.createElement("div");
-
 
     item.className="falling";
 
-
-    item.innerHTML=
-    decoration[
-        Math.floor(Math.random()*decoration.length)
-    ];
-
-
+    item.innerHTML=decoration[Math.floor(Math.random()*decoration.length)];
 
     item.style.left=Math.random()*100+"vw";
 
+    item.style.fontSize=(20+Math.random()*20)+"px";
 
-    item.style.fontSize=
-    (20+Math.random()*25)+"px";
+    item.style.animationDuration=(5+Math.random()*5)+"s";
 
-
-    item.style.animationDuration=
-    (5+Math.random()*5)+"s";
-
-
-    item.style.animationDelay=
-    Math.random()*5+"s";
-
+    item.style.animationDelay=Math.random()*5+"s";
 
     document.body.appendChild(item);
 
-
 }
-
-
 
 </script>
 
-
-
 <div class="container" id="app">
 
+    <div class="gif-box">
 
-<div class="gif-box">
+        <img src="catcake.gif">
 
-<img src="catcake.gif">
+    </div>
 
-</div>
+    <h1>HAPPY BIRTHDAYY</h1>
 
+    <h1>JAERKU SAYANGG</h1>
 
-<h1>
-HAPPY BIRTHDAYY
-</h1>
+    <h1>(੭ˊᵕˋ)੭🎂</h1>
 
+    <button onclick="firstPage()">
 
-<h1>
-JAERKU SAYANGG
-</h1>
+        tap &lt;3
 
-<h1>(੭ˊᵕˋ)੭🎂</h1>
-
-
-
-
-
-<button onclick="firstPage()">
-
-tap &lt;3
-
-</button>
-
+    </button>
 
 </div>
-
-
-
 <script>
 
+function fade(content){
+
+    const app=document.getElementById("app");
+
+    app.style.opacity="0";
+    app.style.transform="translateY(20px)";
+
+    setTimeout(()=>{
+
+        app.innerHTML=content;
+
+        app.style.opacity="1";
+        app.style.transform="translateY(0)";
+
+    },250);
+
+}
+
+/* ---------------- FIRST PAGE ---------------- */
 
 function firstPage(){
 
-
-document.getElementById("app").innerHTML=`
+fade(`
 
 <div class="gif-box">
 
-<img src="panda.gif">
+    <img src="panda.gif">
 
 </div>
-
 
 <div class="text">
 
-Sayang udah berusaha lebih baik untuk setiap tahunnya ya.<br><br>
-
-kereeeen cekali,
-Mujaer Satu Ini 🤎
+    Sayang udah berusaha lebih baik untuk setiap tahunnya yaa.
+    <br>
+    sayangkuu keren cekali, happy birthday sayaang💗
 
 </div>
-
-
 
 <button onclick="secondPage()">
 
-open it &lt;3
+    open it <3
 
 </button>
 
-`;
+`);
 
 }
 
-
+/* ---------------- SECOND PAGE ---------------- */
 
 function secondPage(){
 
-
-document.getElementById("app").innerHTML=`
+fade(`
 
 <div class="gif-box">
 
-<img src="kis.gif">
+    <img src="kis.gif">
 
 </div>
-
-
 
 <div class="text">
 
-Makin tambah umur makin ganteeng aja
-ini pacar aku....gk adil iiih 
+    Makin tambah umur,
+    makin tambah ganteng aja nii pacar aku, Gak adil ihhh..
 </div>
-
-
 
 <button onclick="momentPage()">
 
-&lt;3
+    <3
 
 </button>
 
-`;
+`);
 
 }
 
+/* ---------------- MOMENT PAGE ---------------- */
+
 function momentPage(){
 
-
-document.getElementById("app").innerHTML=`
+fade(`
 
 <div class="moment">
-
 
 <p class="small">
 
@@ -446,13 +525,11 @@ a little moment for you ♡
 
 </p>
 
-
 <h1>
 
-the moment ✨
+The Moment ✨
 
 </h1>
-
 
 <p class="small">
 
@@ -460,194 +537,154 @@ our memories with my favorite person 🤎
 
 </p>
 
-
 </div>
-
-
 
 <div class="photo-slider">
 
+    <img src="foto1.jpg">
 
-<img src="foto1.jpg">
+    <img src="foto2.jpg">
 
-<img src="foto2.jpg">
-
-<img src="foto3.jpg">
-
+    <img src="foto3.jpg">
 
 </div>
-
-
 
 <div class="big-text">
 
-
-sayang pantas dapetin semua cinta di dunia
-hari ini dan selamanya,
-
+    Sayang pantas mendapatkan
+    semua cinta di dunia,
+    hari ini dan selamanya. 🤎
 
 </div>
-
-
 
 <div class="normal-text">
 
+    Terima kasih ya sayang...
+    sudah menjadi bagian terbaik dalam hidup aku.
+    <br><br>
 
-timaaci sayangg udah jadi bagian terbaikku &lt;3
-
+    Semoga nanti foto-foto kita bisa terus bertambah,
+    sampai hari itu. 🥹💗
 
 </div>
-
-
 
 <button onclick="birthdayPage()">
 
-continue ♡
+    ♡
 
 </button>
 
-
-`;
+`);
 
 }
-
-
-
-
+/* ---------------- BIRTHDAY PAGE ---------------- */
 
 function birthdayPage(){
 
-
-document.getElementById("app").innerHTML=`
+fade(`
 
 <div class="gif-box">
 
-
-<img src="surat.gif">
-
+    <img src="surat.gif">
 
 </div>
-
-
 
 <div class="text">
 
+    Okeey ini yang terakhir gantengkuu 🤎
+    <br><br>
 
-Okey ini terakhir gantengku 🤎<br><br>
+    Aku buatin sesuatu khusus buat
+    ulang tahun sayang...
+    <br><br>
 
-
-Aku buatin sesuatu untuk birthdaynya sayangku,
-dibaca pelan pelan aja yaa sayanggg 🎂
-
+    Dibaca pelan-pelan yaa,
+    semoga bisa bikin senyum sedikit. 🥹🎂
 
 </div>
-
-
 
 <button onclick="letterPage()">
 
-
-open this ♡₍ᐢ. .ᐢ₎♡
-
+    Open this ♡₍ᐢ. .ᐢ₎♡
 
 </button>
 
-
-`;
+`);
 
 }
 
-
-
-
+/* ---------------- LETTER PAGE ---------------- */
 
 function letterPage(){
 
-
-document.getElementById("app").innerHTML=`
+fade(`
 
 <h1>
 
-Happy birthday gantengku sayang<br>
+Happy Birthday<br>
 
-૮꒰⸝⸝> ̫ &lt;⸝⸝꒱ა
+Gantengku Sayang 🤎
 
 </h1>
 
-
-
 <div class="letter-box">
-
 
 <p>
 
-
-its you special day. Sayang 💐.<br><br>
-
-
-Wish u all the best, bubbiee 🤎<br>
-
-
-Maaci sayang udah lahir ke dunia ini
-dan jadi pasangan ku.<br>
-
-
-Selamat bertumbuh jadi versi sayang
-yang lebih baik setiap harinya, sayang ku.<br>
-
-
-Panjang umur dan sehat selalu ya sayangggg,
-biar kita bisa terus bareng 🥹💗<br>
+Its your special day, sayangku. 💐🤎<br>
+wish you all the best, jaer <br><br>
+Happy birthday yaa, cintaku.
+Terima kasih sudah lahir ke dunia ini dan
+akhirnya dipertemukan sama aku.
+<br><br>
+selamat bertumbuh jadi versi sayang yang lebih baik setiap harinya, sayangku.<br>
+panjang umur dan sehat selalu ya sayang.
+<br><br>
+Semoga semua doa,
+harapan,
+dan impian yang kamu simpan
+pelan-pelan menjadi nyata.
+<br><br>
 
 
-Harapan aku di ulang tahun sayaaang,<br>
+Kalau suatu hari nanti kamu capek,
+ingat ya...
+kamu nggak harus menghadapi semuanya sendirian.
+Aku akan selalu ada di samping kamu,
+nemenin kamu semampu aku. 🤎
+<br><br>
 
+Terima kasih sudah menerima
+semua kurang lebihnya aku.
+Terima kasih sudah sabar.
+🥹🫶
+<br><br>
 
-Apapun yang sayang minta, cari, dan harapkan
-semoga satu persatu terwujud.<br>
+Happy 22 Years Old,
+sayangkuu. 🎂✨
+<br><br>
 
+Semoga di umur yang baru ini
+kamu semakin bahagia,
+semakin sehat,
+semakin sukses,
+dan semakin mencintai diri sendiri.
+Karena kamu memang pantas mendapatkan
+semua hal baik di dunia ini.
+🤎
+<br><br>
 
-Semoga tuhan mengabulkan hal hal baik yang
-benar-benar diinginkan hati sayanggg.<br>
-
-
-Makasi sayang, udah menerima aku dengan
-semua kekuranganku 🫶🥹<br>
-
-
-Aku akan selalu bangga dan support sayang,
-atas semua proses yang udah sayang lewati.<br>
-
-
-Sayang hebat, dan kuat setiap harinya.<br>
-
-
-Happy 22 yers old, sayanggg 💐<br>
-
-
-Aku akan selalu ada buat sayang,<br>
-
-Disetiap proses, di setiap hari,<br>
-
-Aku selalu sama ayanggg 💗💗<br><br>
-
-
-----from your beloved kecebong🧸.
-
+— From your beloved Kecebong 🧸💗
 
 </p>
 
-
 </div>
 
-
-`;
+`);
 
 }
 
 </script>
 
-
 </body>
-
 </html>
