@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sayang 🤎</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #fff8f2,
+        #e8d0b8
+    );
+
+}
+
+
+/* dekorasi jatuh */
+
+.falling{
+
+    position:fixed;
+    top:-60px;
+    z-index:1;
+
+    animation:fall linear infinite;
+
+    pointer-events:none;
+
+}
+
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+
+}
+
+
+
+.container{
+
+    width:90%;
+    max-width:500px;
+
+    text-align:center;
+
+    position:relative;
+    z-index:5;
+
+}
+
+
+
+h1{
+
+    color:#805438;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.gif-box img{
+
+    width:230px;
+
+    border-radius:20px;
+
+}
+
+
+
+.text{
+
+    margin-top:20px;
+
+    color:#8d6045;
+
+    font-size:21px;
+
+    line-height:1.6;
+
+}
+
+
+
+button{
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#f4a5b8;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* moment */
+
+.moment h1{
+
+    font-family:cursive;
+
+    font-size:45px;
+
+}
+
+
+.small{
+
+    color:#a4775b;
+
+    font-style:italic;
+
+}
+
+
+
+/* foto */
+
+.photo-slider{
+
+    display:flex;
+
+    gap:15px;
+
+    overflow-x:auto;
+
+    padding:15px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+
+.photo-slider img{
+
+    width:260px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    scroll-snap-align:center;
+
+}
+
+
+
+.big-text{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#805438;
+
+}
+
+
+
+.normal-text{
+
+    margin-top:15px;
+
+    color:#95664b;
+
+    font-size:18px;
+
+}
+
+
+
+/* surat */
+
+.letter-box{
+
+    width:90%;
+
+    max-width:450px;
+
+    height:400px;
+
+    overflow-y:auto;
+
+    margin:auto;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.6);
+
+    border-left:3px solid #f0a5b7;
+
+    border-right:3px solid #f0a5b7;
+
+    border-radius:20px;
+
+    text-align:left;
+
+    color:#795548;
+
+    line-height:1.8;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<script>
+
+
+// animasi jatuhan
+
+let decoration=[
+
+"🧸",
+"🎀",
+"💗"
+
+];
+
+
+for(let i=0;i<40;i++){
+
+
+    let item=document.createElement("div");
+
+
+    item.className="falling";
+
+
+    item.innerHTML=
+    decoration[
+        Math.floor(Math.random()*decoration.length)
+    ];
+
+
+
+    item.style.left=Math.random()*100+"vw";
+
+
+    item.style.fontSize=
+    (20+Math.random()*25)+"px";
+
+
+    item.style.animationDuration=
+    (5+Math.random()*5)+"s";
+
+
+    item.style.animationDelay=
+    Math.random()*5+"s";
+
+
+    document.body.appendChild(item);
+
+
+}
+
+
+
+</script>
+
+
+
+<div class="container" id="app">
+
+
+<div class="gif-box">
+
+<img src="catcake.gif">
+
+</div>
+
+
+<h1>
+HAPPY BIRTHDAYY
+</h1>
+
+
+<h1>
+JAERKU SAYANGG
+</h1>
+
+<h1>(੭ˊᵕˋ)੭🎂</h1>
+
+
+
+
+
+<button onclick="firstPage()">
+
+tap &lt;3
+
+</button>
+
+
+</div>
+
+
+
+<script>
+
+
+function firstPage(){
+
+
+document.getElementById("app").innerHTML=`
+
+<div class="gif-box">
+
+<img src="panda.gif">
+
+</div>
+
+
+<div class="text">
+
+Sayang udah berusaha lebih baik untuk setiap tahunnya ya.<br><br>
+
+kereeeen cekali,
+Mujaer Satu Ini 🤎
+
+</div>
+
+
+
+<button onclick="secondPage()">
+
+open it &lt;3
+
+</button>
+
+`;
+
+}
+
+
+
+function secondPage(){
+
+
+document.getElementById("app").innerHTML=`
+
+<div class="gif-box">
+
+<img src="kis.gif">
+
+</div>
+
+
+
+<div class="text">
+
+Makin tambah umur makin ganteeng aja
+ini pacar aku....gk adil iiih 
+</div>
+
+
+
+<button onclick="momentPage()">
+
+&lt;3
+
+</button>
+
+`;
+
+}
+
+function momentPage(){
+
+
+document.getElementById("app").innerHTML=`
+
+<div class="moment">
+
+
+<p class="small">
+
+a little moment for you ♡
+
+</p>
+
+
+<h1>
+
+the moment ✨
+
+</h1>
+
+
+<p class="small">
+
+our memories with my favorite person 🤎
+
+</p>
+
+
+</div>
+
+
+
+<div class="photo-slider">
+
+
+<img src="foto1.jpg">
+
+<img src="foto2.jpg">
+
+<img src="foto3.jpg">
+
+
+</div>
+
+
+
+<div class="big-text">
+
+
+sayang pantas dapetin semua cinta di dunia
+hari ini dan selamanya,
+
+
+</div>
+
+
+
+<div class="normal-text">
+
+
+timaaci sayangg udah jadi bagian terbaikku &lt;3
+
+
+</div>
+
+
+
+<button onclick="birthdayPage()">
+
+continue ♡
+
+</button>
+
+
+`;
+
+}
+
+
+
+
+
+function birthdayPage(){
+
+
+document.getElementById("app").innerHTML=`
+
+<div class="gif-box">
+
+
+<img src="surat.gif">
+
+
+</div>
+
+
+
+<div class="text">
+
+
+Okey ini terakhir gantengku 🤎<br><br>
+
+
+Aku buatin sesuatu untuk birthdaynya sayangku,
+dibaca pelan pelan aja yaa sayanggg 🎂
+
+
+</div>
+
+
+
+<button onclick="letterPage()">
+
+
+open this ♡₍ᐢ. .ᐢ₎♡
+
+
+</button>
+
+
+`;
+
+}
+
+
+
+
+
+function letterPage(){
+
+
+document.getElementById("app").innerHTML=`
+
+<h1>
+
+Happy birthday gantengku sayang<br>
+
+૮꒰⸝⸝> ̫ &lt;⸝⸝꒱ა
+
+</h1>
+
+
+
+<div class="letter-box">
+
+
+<p>
+
+
+its you special day. Sayang 💐.<br><br>
+
+
+Wish u all the best, bubbiee 🤎<br>
+
+
+Maaci sayang udah lahir ke dunia ini
+dan jadi pasangan ku.<br>
+
+
+Selamat bertumbuh jadi versi sayang
+yang lebih baik setiap harinya, sayang ku.<br>
+
+
+Panjang umur dan sehat selalu ya sayangggg,
+biar kita bisa terus bareng 🥹💗<br>
+
+
+Harapan aku di ulang tahun sayaaang,<br>
+
+
+Apapun yang sayang minta, cari, dan harapkan
+semoga satu persatu terwujud.<br>
+
+
+Semoga tuhan mengabulkan hal hal baik yang
+benar-benar diinginkan hati sayanggg.<br>
+
+
+Makasi sayang, udah menerima aku dengan
+semua kekuranganku 🫶🥹<br>
+
+
+Aku akan selalu bangga dan support sayang,
+atas semua proses yang udah sayang lewati.<br>
+
+
+Sayang hebat, dan kuat setiap harinya.<br>
+
+
+Happy 22 yers old, sayanggg 💐<br>
+
+
+Aku akan selalu ada buat sayang,<br>
+
+Disetiap proses, di setiap hari,<br>
+
+Aku selalu sama ayanggg 💗💗<br><br>
+
+
+----from your beloved kecebong🧸.
+
+
+</p>
+
+
+</div>
+
+
+`;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
